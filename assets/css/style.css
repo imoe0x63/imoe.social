@@ -7,6 +7,17 @@
     box-sizing: border-box;
 
     overflow: hidden;
+
+
+    /* to prevent text selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 .container {
