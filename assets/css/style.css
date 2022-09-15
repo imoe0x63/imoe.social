@@ -40,11 +40,20 @@ body {
 
 /* header */
 
+.inline {
+    overflow: hidden;
+    display: inline-block;
+}
+
 .row {
     display: flex;
     flex-direction: row;
 }
 
+.row-reverse{ 
+    display: flex;
+    flex-direction: row-reverse;
+}
 .col {
     display: flex;
     flex-direction: column;
@@ -54,15 +63,13 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    padding: 1rem;
+    padding: 0.6rem;
 
     background-color: var(--title-bar-dark-color);
     color: var(--font-dark-color);
 }
 
 .nav { 
-    /* nothing special */
-    /*    font-size: 24px; */
     background-color: var(--title-bar-dark-color);
 }
 
@@ -71,14 +78,21 @@ body {
 }
 
 .nav-item {
-    font-size: 24px;
+    cursor: pointer;
 }
 
 a {
     text-decoration: none;
     color: var(--font-dark-color);
 
-    margin-left: 2vw;
+    padding: 0.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: default;
+
 }
 
 a:hover {
@@ -149,16 +163,12 @@ p {
     }
 
     .menu {
-        display: inline-block;
+        display: flex;
     }
 
 
     .nav {
-        position: absolute; 
-        left: -100%;
-
-        width: 100vw;
-        height: 100vh;
+        display: none;
     }
 }
 
