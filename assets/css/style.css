@@ -2,9 +2,6 @@
 
 * {
     box-sizing: border-box;
-
-    /*border: 1px solid black;*/
-
     margin: 0;
     padding: 0;
 
@@ -17,41 +14,65 @@
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
 
-    --main-color: white;
-    --dark-color: black;
 
-    --container-main-color: #e1c2d3;
-    --container-dark-color: #1e2c3d;
+    /* some variables */
+    --main-color: white;
+    --dark-color: #2e2e2e;;
+
+    --container-main-color: rgb(0, 182, 182);
+    --container-dark-color: rgb(0, 71, 71);
 
     --title-bar-main-color: #e1e1e1;
-    --title-bar-dark-color: #2e2e2e;
+    --title-bar-dark-color: black;
 
     --font-main-color: var(--dark-color);
     --font-dark-color: var(--main-color);
 
 }
 
-ul {
-    flex: 1;
-
-
-    flex-direction: row-reverse;
-}
-
-a {
-    text-decoration: none;
-    cursor: default;
-
-    color: var(--font-main-color);
-}
-
-
 body {
     min-width: 100vw;
     min-height: 100vh;
 
-    background-color: var(--main-color);
-    color: var(--font-main-color);
+    background-color: var(--dark-color);
+    color: var(--font-dark-color);
+
+    flex-direction: column;
+    display: flex;
+}
+
+/* header */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+
+    background-color: var(--title-bar-dark-color);
+    color: var(--font-dark-color);
+}
+
+.nav { 
+    /* nothing special */
+    font-size: 24px;
+}
+
+.nav-item {
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-dark-color);
+
+    margin-left: 2vw;
+}
+
+a:hover {
+    background-color: transparent;
+    color: teal;
+
 }
 
 
@@ -60,19 +81,20 @@ main {
     align-items: center;
     justify-content: center;
 
-    width: 100vw;
-    height: 100vh;
+    /* TODO: in future make this for 600px wide screens only */
+    max-height: 100vh;
+    flex: 1;
 }
 
 
 .box {
 
-    padding: 5rem;
+    padding: 3rem;
 
-    background-color:  var(--dark-color);
+    background-color:  var(--container-main-color);
     border-radius: 10px;
 
-    box-shadow: 0px  2px 8px teal;
+    box-shadow: 0px  1px 4px teal;
 
 
 }
@@ -84,34 +106,22 @@ p {
 .paragraph {
 
     text-align: center;
-    color: var(--font-dark-color);
+    color: var(--font-main-color);
+
+    font-size: 24px;
 
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    padding: 1rem;
 
-    background-color: var(--title-bar-main-color);
-}
 
-.nav {
-
-}
-
-.nav-item {
-    padding: 0px 0.61rem 0px 2px;
-}
 
 .container {
-    background-color: var(--main-color);
+    background-color: var(--dark-color);
     padding: 0.6rem;
 }
 
-#menu {
+.menu {
     display: none;
 }
 
@@ -124,17 +134,13 @@ p {
     }
 
     .paragraph {
-      font-size: 1rem;
+      font-size: 16px;
     }
 
-    #menu {
+    .menu {
         display: inline-block;
     }
 
-    #menu:hover {
-        cursor: pointer;
-        color: blue;
-    }
 
     .nav {
         position: absolute; 
