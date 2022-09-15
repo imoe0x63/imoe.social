@@ -77,13 +77,13 @@ body {
     background-color: var(--title-bar-dark-color);
 }
 
-.nav-item {
-    cursor: pointer;
-}
-
 div.theme, div.menu, a.nav-item, a.brand {
     padding: 0.4rem;
+    cursor:pointer;
 }
+
+
+
 
 a {
     text-decoration: none;
@@ -100,7 +100,6 @@ a {
 a:hover {
     background-color: transparent;
     color: teal;
-
 }
 
 
